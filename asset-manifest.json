@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-feedbackApp/static/css/main.a7d5e8e6.css",
+    "main.js": "/react-feedbackApp/static/js/main.44831304.js",
+    "static/media/Roboto-Regular.ttf": "/react-feedbackApp/static/media/Roboto-Regular.a8d6ac03c7b96b7acb62.ttf",
+    "static/media/TitilliumWeb-Regular.ttf": "/react-feedbackApp/static/media/TitilliumWeb-Regular.e53e0538893d432e0635.ttf",
+    "index.html": "/react-feedbackApp/index.html",
+    "main.a7d5e8e6.css.map": "/react-feedbackApp/static/css/main.a7d5e8e6.css.map",
+    "main.44831304.js.map": "/react-feedbackApp/static/js/main.44831304.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7d5e8e6.css",
+    "static/js/main.44831304.js"
+  ]
+}
