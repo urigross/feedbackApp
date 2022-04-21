@@ -1,0 +1,33 @@
+// Pages
+@import "pages/FeedbackHome";
+//Components
+@import "components/FeedbackList";
+@import "components/FeedbackPreview";
+//Typography
+@import "basics/typography";
+body {
+    box-sizing: border-box;
+    background-color: #E5E5E5;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+textarea,
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    border: none;
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
