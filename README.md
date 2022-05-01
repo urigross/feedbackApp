@@ -1,3 +1,6 @@
+# About this project
+
+This project is a demo how to fit to specific designers css code lines. No jsx complexity, No text area placeholder because of the css line codes. 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
