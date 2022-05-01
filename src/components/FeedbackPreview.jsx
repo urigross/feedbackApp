@@ -47,12 +47,26 @@ export class FeedbackPreview extends Component {
         const value = target.value
         this.setState(prevState => ({ feedback: { ...prevState.feedback, [field]: value } }))
     }
+    handleClick = ()=>{
+        this.inputRef.current.focus();
+        this.onEditMode();
+    }
 
     onSaveFeedback = async (ev) => {
         ev.preventDefault();
         const { feedback } = this.state;
         this.props.onFeedbackUpdate(feedback);
-        this.toggleEditMode();
+        this.onExitEditMode();
+    }
+
+    onEditMode = () =>{
+        var isEditMode = true;
+        this.setState({ isEditMode });
+    }
+
+    onExitEditMode = () =>{
+        var isEditMode = false;
+        this.setState({ isEditMode });
     }
 
     toggleEditMode = () => {
@@ -115,12 +129,20 @@ export class FeedbackPreview extends Component {
                 <div className="submit-btn-container">
                     <button className='submit-btn' onClick={this.onSaveFeedback}>Submit</button>
                 </div>
-                <div className="feedback-text-container">
-                    <textarea ref={this.inputRef} type="textarea" id="comment"
-                        onFocus={this.toggleEditMode} onBlur={this.toggleEditMode} value={comment} onChange={this.handleChange}></textarea>
+                <div className="feedback-text-container"
+                    onFocus={this.onEditMode} 
+                    onBlur={this.onExitEditMode} 
+                >
+                    <textarea ref={this.inputRef} 
+                    type="textarea" 
+                    id="comment"
+                    value={comment} 
+                    onChange={this.handleChange}></textarea>
                 </div>
                 {!comment && !this.state.isEditMode && <div className="text-area-placeholder-container">
-                    <p>Any additional feedback?</p>
+                    <p
+                       onClick={this.handleClick} 
+                    >Any additional feedback?</p>
                 </div>}
             </form>
         )
